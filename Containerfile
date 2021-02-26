@@ -6,6 +6,7 @@ ENV GO111MODULE=on \
 WORKDIR /build
 COPY src/go.mod .
 COPY src/check.go .
+COPY src/go.sum .
 
 RUN go build -o network-check .
 WORKDIR /dist
